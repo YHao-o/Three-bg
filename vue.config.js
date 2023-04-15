@@ -7,6 +7,5 @@ module.exports = defineConfig({
     template:'public/index.html',
     filename:'index.html'
   }
-
  }
 })
