@@ -172,5 +172,7 @@
     
   </script>
   
-  <style lang="scss" scoped></style>
+  <style lang="scss" scoped>
+@import url(../../../css/background2To3.scss);
+</style>
   
