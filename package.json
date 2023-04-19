@@ -1,7 +1,7 @@
 {
   "name": "three-bg",
-  "version": "0.1.0",
-  "description": "Three.js—背景图",
+  "version": "0.1.9",
+  "description": "0.1.X 版本皆为测试版本，请勿下载",
   "main": "dist/index.umd.js",
   "keywords": [
     "threejs",
@@ -24,10 +24,7 @@
   "dependencies": {
     "core-js": "^3.8.3",
     "sass": "^1.62.0",
-    "sass-loader": "^13.2.2",
-    "three": "^0.151.3",
-    "vue": "3.2.47",
-    "vue-server-renderer": "2.7.14"
+    "three": "^0.151.3"
   },
   "devDependencies": {
     "@babel/core": "^7.12.16",
@@ -38,7 +35,12 @@
     "css-loader": "^6.7.3",
     "eslint": "^7.32.0",
     "eslint-plugin-vue": "^8.0.3",
+    "gulp": "^4.0.2",
+    "gulp-minify-css": "^1.2.4",
+    "gulp-sass": "^5.1.0",
+    "sass-loader": "^13.2.2",
     "style-loader": "^3.3.2",
+    "vue": "^3.2.47",
     "vue-loader": "^17.0.1",
     "vuepress": "^2.0.0-beta.61",
     "webpack-cli": "^5.0.1"
