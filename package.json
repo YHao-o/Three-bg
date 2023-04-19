@@ -1,6 +1,6 @@
 {
   "name": "three-bg",
-  "version": "0.1.15",
+  "version": "0.1.16",
   "description": "0.1.X 版本皆为测试版本，请勿下载",
   "main": "dist/index.umd.js",
   "keywords": [

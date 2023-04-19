@@ -17,6 +17,21 @@ import { toRefs, nextTick } from 'vue'
 export default {
   name: 'Background2To3',
   props: {
+    // 页面大小变化事件
+    screenResizeFn:{
+      type:Function,
+      // default:e=> console.log(e),
+    },
+    // 鼠标移动事件
+    mouseMoveFn:{
+      type:Function,
+      // default:e=> console.log(e),
+    },
+    //图片加载完成的回调函数
+    picLoadedFn:{
+      type:Function,
+      // default:(e)=> console.log(e),
+    },
     //是否自定义样式
     selfStyle: {
       type: String,
@@ -32,6 +47,11 @@ export default {
       // 偏移强度
       type: Number,
       default: 2,
+    },
+    // 刷新频率
+    refreshRate:{
+      type:Number,
+      default:100,
     },
     picSrc: {
       //图片路径
@@ -60,12 +80,17 @@ export default {
       picSrc,
       // picHeight, picWidth,
       // customStyle,
+      refreshRate,
+      screenResizeFn,
+      mouseMoveFn,
       adaptive,
       strength,
       depthSrc,
       canvasWidth,
       canvasHeight,
+      picLoadedFn
     } = toRefs(props)
+    console.log(picLoadedFn);
     //创建场景
     const scene = new Scene()
     //创建相机
@@ -78,7 +103,7 @@ export default {
     camera.position.set(0, 0, 6)
     //渲染器
     let renderer = new WebGLRenderer({ antialias: true })
-    renderer.setSize(window.screen.width, window.screen.height)
+  adaptive.value? renderer.setSize(window.innerWidth, window.innerHeight):renderer.setSize(window.screen.width, window.screen.height)
     // 加载纹理
     const textureLoader = new TextureLoader()
     // 加载图片
@@ -86,6 +111,7 @@ export default {
       picSrc.value,
       // 图片加载后的回调，读取图片比例重设画布比例
       function (texture) {
+        picLoadedFn.value&&picLoadedFn.value(texture.source)
         const { width, height } = texture.source.data
         if (window.innerWidth / window.innerHeight < width / height) {
           plane.scale.set(
@@ -100,6 +126,7 @@ export default {
             0
           ) //plane.scale.set(x轴方向的缩放倍数, y轴方向的缩放倍数, z轴方向的缩放倍数);
         }
+       
       }
     )
 
@@ -153,7 +180,8 @@ export default {
       // 根据页面大小重新渲染画布与模型
       // 防抖
       let timer = null
-      window.addEventListener('resize', () => {
+      window.addEventListener('resize', (e) => {
+        screenResizeFn.value && screenResizeFn.value(e)
         if (adaptive.value === true) {
           if (timer !== null) {
             clearTimeout(timer)
@@ -166,11 +194,12 @@ export default {
             camera.updateProjectionMatrix()
             // 重置渲染器输出画布canvas尺寸
             renderer.setSize(window.innerWidth, window.innerHeight)
-          }, 100)
+          }, refreshRate.value)
         }
       })
 
       window.addEventListener('mousemove', (e) => {
+        mouseMoveFn.value && mouseMoveFn.value(e)
         mouse.x =
           ((window.innerWidth / 2 - e.clientX) / window.innerWidth) *
             strength.value -

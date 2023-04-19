@@ -10,6 +10,8 @@
       :adaptive="true"
       :canvasHeight="1"
       :canvasWidth="1"
+      :picLoadedFn="mouseFn"
+      :refreshRate="100"
     ></Background2To3
     >>
   </div>
@@ -19,6 +21,12 @@
 export default {
   name: 'App',
   components: {},
+  setup(){
+    function mouseFn(e){
+      console.log(e);
+    }
+    return{mouseFn}
+  }
 }
 </script>
 
