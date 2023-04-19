@@ -177,6 +177,13 @@ export default {
     nextTick(() => {
       const container = document.getElementsByClassName('containerThree')[0]
       container.appendChild(renderer.domElement)
+      // 调整摄像头宽高比
+      camera.aspect = container.clientWidth / container.clientHeight
+      // 更新摄像机的投影矩阵
+      camera.updateProjectionMatrix()
+      // 重置渲染器输出画布canvas尺寸
+      renderer.setSize(container.clientWidth, container.clientHeight)
+      // console.dir(container.clientHeight)
       // 根据页面大小重新渲染画布与模型
       // 防抖
       let timer = null
@@ -189,11 +196,11 @@ export default {
           }
           timer = setTimeout(() => {
             // 调整摄像头宽高比
-            camera.aspect = window.innerWidth / window.innerHeight
+            camera.aspect = container.clientWidth / container.clientHeight
             // 更新摄像机的投影矩阵
             camera.updateProjectionMatrix()
             // 重置渲染器输出画布canvas尺寸
-            renderer.setSize(window.innerWidth, window.innerHeight)
+            renderer.setSize(container.clientWidth, container.clientHeight)
           }, refreshRate.value)
         }
       })
@@ -215,6 +222,19 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
-@import url(../../../css/background2To3.scss);
+<style scoped>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+canvas {
+  display: block;
+  position: absolute;
+  width: 100% !important;
+  height: 100% !important;
+  top: 0;
+  left: 0;
+}
 </style>

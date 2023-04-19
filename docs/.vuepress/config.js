@@ -1,20 +1,20 @@
-import { defineUserConfig,defaultTheme } from 'vuepress'
+import { defineUserConfig, defaultTheme } from 'vuepress'
 
 export default defineUserConfig({
   lang: 'zh-CN',
   title: 'THREE-BG',
   description: '以three.js为核的背景组件',
-  public:`${__dirname}/public`, //指定 Public 文件目录。
+  public: `${__dirname}/public`, //指定 Public 文件目录。
   head: [['link', { rel: 'icon', href: '/images/headpic.png' }]],
   theme: defaultTheme({
     // 侧边栏数组
     // 所有页面会使用相同的侧边栏
-    sidebar:[{
-        text:'快速上手',
-        link:'/'
-    },{
-        text:'Background2To3',
-        link:'/componentDocs/2To3'
+    sidebar: [{
+      text: '快速上手',
+      link: '/'
+    }, {
+      text: 'Background2To3',
+      link: '/componentDocs/2To3'
     }]
     //  [
     //   // SidebarItem
