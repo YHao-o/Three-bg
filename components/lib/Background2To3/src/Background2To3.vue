@@ -1,7 +1,5 @@
 <template>
-  <div>
-    <div class="container" ref="Container"></div>
-  </div>
+  <div class="containerThree" :style="selfStyle"></div>
 </template>
 
 <script>
@@ -15,15 +13,15 @@ import {
   ShaderMaterial,
   Vector2,
 } from 'three'
-import { toRefs, onMounted, ref, nextTick } from 'vue'
+import { toRefs, nextTick } from 'vue'
 export default {
   name: 'Background2To3',
   props: {
     //是否自定义样式
-    customStyle: {
+    selfStyle: {
       type: String,
       default:
-        'width: 100vw; height: 100vh; position: absolute; top: 0; left: 0',
+        'width: 100vw; height: 100vh; position: absolute; top: 0; left: 0;z-index:-1',
     },
     // 是否开启自适应
     adaptive: {
@@ -57,7 +55,6 @@ export default {
     },
   },
   setup(props) {
-    const Container = ref(null)
     // 解构props中的路径
     const {
       picSrc,
@@ -150,10 +147,9 @@ export default {
       requestAnimationFrame(animate)
       renderer.render(scene, camera)
     })
-    onMounted(() => {
-      nextTick(() => {
-        Container.value.appendChild(renderer.domElement)
-      })
+    nextTick(() => {
+      const container = document.getElementsByClassName('containerThree')[0]
+      container.appendChild(renderer.domElement)
       // 根据页面大小重新渲染画布与模型
       // 防抖
       let timer = null
@@ -185,8 +181,7 @@ export default {
           1
       })
     })
-
-    return { Container }
+    return {}
   },
 }
 </script>
