@@ -2,6 +2,7 @@ import { defineUserConfig, defaultTheme } from 'vuepress'
 import { searchPlugin } from '@vuepress/plugin-search'
 
 export default defineUserConfig({
+  base: '/Three-bg/',
   lang: 'zh-CN',
   title: 'THREE-BG',
   description: '以three.js为核的背景组件',

@@ -12,7 +12,10 @@
 </code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><br/>
 <br/>
 <h4 id="示例" tabindex="-1"><a class="header-anchor" href="#示例" aria-hidden="true">#</a> 示例</h4>
-<Background2To3 :strength="3" picSrc='/images/2dto3d.jpg' depthSrc='/images/2dto3d_depth.jpg' selfStyle='width:780px; height:360px; top: 0; left: 0;z-index:1'></Background2To3><h4 id="attributes" tabindex="-1"><a class="header-anchor" href="#attributes" aria-hidden="true">#</a> Attributes</h4>
+<ClientOnly>
+<Background2To3 :strength="3" picSrc='/Three-bg/images/2dto3d.jpg' depthSrc='/Three-bg/images/2dto3d_depth.jpg' selfStyle='width:780px; height:360px; top: 0; left: 0;z-index:1'></Background2To3>
+</ClientOnly>
+<h4 id="attributes" tabindex="-1"><a class="header-anchor" href="#attributes" aria-hidden="true">#</a> Attributes</h4>
 <p><a href="https://convert.leiapix.com" target="_blank" rel="noopener noreferrer">获取深度图<ExternalLinkIcon/></a></p>
 <table>
 <thead>
