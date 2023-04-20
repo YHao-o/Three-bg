@@ -7,12 +7,16 @@
 or
 <span class="token function">yarn</span> <span class="token function">add</span> three-bg
 </code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h4 id="_2-引用组件库" tabindex="-1"><a class="header-anchor" href="#_2-引用组件库" aria-hidden="true">#</a> 2.引用组件库</h4>
+<blockquote>
+<p>在 main.js 中引入</p>
+</blockquote>
 <div class="language-javascript line-numbers-mode" data-ext="js"><pre v-pre class="language-javascript"><code><span class="token comment">//全部引入</span>
 <span class="token keyword">import</span> <span class="token constant">THREEBG</span> <span class="token keyword">from</span> <span class="token string">'three-bg'</span>
 vue<span class="token punctuation">.</span><span class="token function">use</span><span class="token punctuation">(</span><span class="token constant">THREEBG</span><span class="token punctuation">)</span>
 <span class="token comment">//按需引入</span>
-<span class="token keyword">import</span> <span class="token punctuation">{</span> Background2To3 <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'three-bg'</span>
+<span class="token comment">//目前就一个组件，所以都一样</span>
+<span class="token keyword">import</span> Background2To3 <span class="token keyword">from</span> <span class="token string">'three-bg'</span>
 vue<span class="token punctuation">.</span><span class="token function">use</span><span class="token punctuation">(</span>Background2To3<span class="token punctuation">)</span>
-</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div></div></template>
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div></div></template>
 
 

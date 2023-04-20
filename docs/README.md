@@ -12,11 +12,14 @@ yarn add three-bg
 
 #### 2.引用组件库
 
+> 在 main.js 中引入
+
 ```javascript
 //全部引入
 import THREEBG from 'three-bg'
 vue.use(THREEBG)
 //按需引入
-import { Background2To3 } from 'three-bg'
+//目前就一个组件，所以都一样
+import Background2To3 from 'three-bg'
 vue.use(Background2To3)
 ```

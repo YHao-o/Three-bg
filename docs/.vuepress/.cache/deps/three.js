@@ -1,5 +1,3 @@
-import "./chunk-7FP5O474.js";
-
 // node_modules/three/build/three.module.js
 var REVISION = "151";
 var MOUSE = { LEFT: 0, MIDDLE: 1, RIGHT: 2, ROTATE: 0, DOLLY: 1, PAN: 2 };

@@ -1,4 +1,5 @@
 import { defineUserConfig, defaultTheme } from 'vuepress'
+import { searchPlugin } from '@vuepress/plugin-search'
 
 export default defineUserConfig({
   lang: 'zh-CN',
@@ -6,6 +7,18 @@ export default defineUserConfig({
   description: '以three.js为核的背景组件',
   public: `${__dirname}/public`, //指定 Public 文件目录。
   head: [['link', { rel: 'icon', href: '/images/headpic.png' }]],
+  plugins: [
+    searchPlugin({
+      locales: {
+        '/': {
+          placeholder: 'Search',
+        },
+        '/zh/': {
+          placeholder: '搜索',
+        },
+      },
+    }),
+  ],
   theme: defaultTheme({
     // 侧边栏数组
     // 所有页面会使用相同的侧边栏

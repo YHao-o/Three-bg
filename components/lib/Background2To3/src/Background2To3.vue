@@ -55,11 +55,13 @@ export default {
     },
     picSrc: {
       //图片路径
+      required: true,
       type: String,
       default: '',
     },
     depthSrc: {
       //深度图片路径
+      required: true,
       type: String,
       default: '',
     },

@@ -33,6 +33,7 @@
     "@vue/cli-plugin-babel": "~5.0.0",
     "@vue/cli-plugin-eslint": "~5.0.0",
     "@vue/cli-service": "~5.0.0",
+    "@vuepress/plugin-search": "^2.0.0-beta.61",
     "css-loader": "^6.7.3",
     "eslint": "^7.32.0",
     "eslint-plugin-vue": "^8.0.3",
