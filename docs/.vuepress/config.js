@@ -23,6 +23,13 @@ export default defineUserConfig({
   theme: defaultTheme({
     // 侧边栏数组
     // 所有页面会使用相同的侧边栏
+    navbar: [{
+      text: 'Home', link: '/'
+    }, {
+      text: 'Github', link: 'https://github.com/YHao-o/Three-bg'
+    }, {
+      text: 'Npm', link: 'https://www.npmjs.com/package/three-bg'
+    }],
     sidebar: [{
       text: '快速上手',
       link: '/'
