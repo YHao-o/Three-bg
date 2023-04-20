@@ -2,6 +2,8 @@
 
 > 这就是一个防止我忘记 three.js 咋用的简单组件库，目前主要用于网页背景
 
+**仅支持 Vue3**
+
 #### 1.安装组件库
 
 ```bash
@@ -17,6 +19,7 @@ yarn add three-bc
 import THREEBG from 'three-bc'
 vue.use(THREEBG)
 //按需引入
-import { Background2To3 } from 'three-bc'
+//目前仅有一个组件
+import Background2To3 from 'three-bc'
 vue.use(Background2To3)
 ```

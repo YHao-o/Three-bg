@@ -1,6 +1,7 @@
 <template><div><h2 id="快速上手" tabindex="-1"><a class="header-anchor" href="#快速上手" aria-hidden="true">#</a> 快速上手</h2>
 <blockquote>
-<p>这就是一个防止我忘记 three.js 咋用的简单组件库，目前主要用于网页背景</p>
+<p>这就是一个防止我忘记 three.js 咋用的简单组件库，目前主要用于网页背景
+<strong>仅支持 Vue3</strong></p>
 </blockquote>
 <h4 id="_1-安装组件库" tabindex="-1"><a class="header-anchor" href="#_1-安装组件库" aria-hidden="true">#</a> 1.安装组件库</h4>
 <div class="language-bash line-numbers-mode" data-ext="sh"><pre v-pre class="language-bash"><code><span class="token function">npm</span> i three-bg
