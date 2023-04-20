@@ -48,11 +48,6 @@ export default {
       type: Number,
       default: 2,
     },
-    // 刷新频率
-    refreshRate: {
-      type: Number,
-      default: 100,
-    },
     picSrc: {
       //图片路径
       required: true,
@@ -82,7 +77,6 @@ export default {
       picSrc,
       // picHeight, picWidth,
       // customStyle,
-      refreshRate,
       screenResizeFn,
       mouseMoveFn,
       adaptive,
@@ -196,7 +190,7 @@ export default {
             camera.updateProjectionMatrix()
             // 重置渲染器输出画布canvas尺寸
             renderer.setSize(window.innerWidth, window.innerHeight)
-          }, refreshRate.value)
+          }, 100)
         }
       })
 
