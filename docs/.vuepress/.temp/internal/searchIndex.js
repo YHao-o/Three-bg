@@ -22,6 +22,28 @@ export const searchIndex = [
     "extraFields": []
   },
   {
+    "title": "ModelHere",
+    "headers": [
+      {
+        "level": 3,
+        "title": "代码",
+        "slug": "代码",
+        "link": "#代码",
+        "children": []
+      },
+      {
+        "level": 3,
+        "title": "示例",
+        "slug": "示例",
+        "link": "#示例",
+        "children": []
+      }
+    ],
+    "path": "/componentDocs/Model.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
     "title": "",
     "headers": [],
     "path": "/404.html",

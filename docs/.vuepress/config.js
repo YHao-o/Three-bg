@@ -7,7 +7,7 @@ export default defineUserConfig({
   title: 'THREE-BG',
   description: '以three.js为核的背景组件',
   public: `${__dirname}/public`, //指定 Public 文件目录。
-  head: [['link', { rel: 'icon', href: '/images/headpic.png' }]],
+  head: [['link', { rel: 'icon', href: '/Three-bg/images/favoricon.png' }]],
   plugins: [
     searchPlugin({
       locales: {
@@ -36,6 +36,9 @@ export default defineUserConfig({
     }, {
       text: 'Background2To3',
       link: '/componentDocs/2To3'
+    }, {
+      text: 'ModelHere',
+      link: '/componentDocs/Model'
     }]
     //  [
     //   // SidebarItem

@@ -20,7 +20,8 @@ yarn add three-bg
 import THREEBG from 'three-bg'
 vue.use(THREEBG)
 //按需引入
-//目前就一个组件，所以都一样
-import Background2To3 from 'three-bg'
-vue.use(Background2To3)
+import { Background2To3, ModelHere } from 'three-bg'
+vue.use(Background2To3).use(ModelHere)
 ```
+
+[参数详情](https://yhao-o.github.io/Three-bg/)

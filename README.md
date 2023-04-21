@@ -7,19 +7,21 @@
 #### 1.安装组件库
 
 ```bash
-npm i three-bc
+npm i three-bg
 or
-yarn add three-bc
+yarn add three-bg
 ```
 
 #### 2.引用组件库
 
 ```javascript
 //全部引入
-import THREEBG from 'three-bc'
+import THREEBG from 'three-bg'
 vue.use(THREEBG)
 //按需引入
-//目前仅有一个组件
-import Background2To3 from 'three-bc'
-vue.use(Background2To3)
+
+import { Background2To3, ModelHere } from 'three-bg'
+vue.use(Background2To3).use(ModelHere)
 ```
+
+点击[参数详情](https://yhao-o.github.io/Three-bg/)了解更多

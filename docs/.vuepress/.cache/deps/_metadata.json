@@ -1,35 +1,53 @@
 {
-  "hash": "6ba71e69",
-  "browserHash": "9461b45a",
+  "hash": "1785fea2",
+  "browserHash": "b4428957",
   "optimized": {
     "@vue/devtools-api": {
       "src": "../../../../node_modules/@vue/devtools-api/lib/esm/index.js",
       "file": "@vue_devtools-api.js",
-      "fileHash": "efa8b822",
+      "fileHash": "8e6f7869",
       "needsInterop": false
     },
     "@vuepress/shared": {
       "src": "../../../../node_modules/@vuepress/shared/dist/index.js",
       "file": "@vuepress_shared.js",
-      "fileHash": "73dfcf47",
+      "fileHash": "c91484f2",
       "needsInterop": false
     },
     "vue": {
       "src": "../../../../node_modules/vue/dist/vue.runtime.esm-bundler.js",
       "file": "vue.js",
-      "fileHash": "ec1dcf9e",
+      "fileHash": "0c950bb7",
       "needsInterop": false
     },
     "vue-router": {
       "src": "../../../../node_modules/vue-router/dist/vue-router.esm-bundler.js",
       "file": "vue-router.js",
-      "fileHash": "ded66871",
+      "fileHash": "d872592d",
       "needsInterop": false
     },
     "three": {
       "src": "../../../../node_modules/three/build/three.module.js",
       "file": "three.js",
-      "fileHash": "98c4972c",
+      "fileHash": "8e5886f6",
+      "needsInterop": false
+    },
+    "three/examples/jsm/loaders/GLTFLoader": {
+      "src": "../../../../node_modules/three/examples/jsm/loaders/GLTFLoader.js",
+      "file": "three_examples_jsm_loaders_GLTFLoader.js",
+      "fileHash": "fcf0b069",
+      "needsInterop": false
+    },
+    "three/examples/jsm/loaders/DRACOLoader": {
+      "src": "../../../../node_modules/three/examples/jsm/loaders/DRACOLoader.js",
+      "file": "three_examples_jsm_loaders_DRACOLoader.js",
+      "fileHash": "eba0dec9",
+      "needsInterop": false
+    },
+    "gsap": {
+      "src": "../../../../node_modules/gsap/index.js",
+      "file": "gsap.js",
+      "fileHash": "0dc7efa0",
       "needsInterop": false
     }
   },
@@ -42,6 +60,9 @@
     },
     "chunk-JXWQMH7G": {
       "file": "chunk-JXWQMH7G.js"
+    },
+    "chunk-N64XG22S": {
+      "file": "chunk-N64XG22S.js"
     }
   }
 }
