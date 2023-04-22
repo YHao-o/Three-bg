@@ -1,5 +1,5 @@
 <template>
-  <div class="canvas-container" :style="selfStyle"></div>
+  <div class="canvas-container" ref="ModelCanvas" :style="selfStyle"></div>
 </template>
 <script>
 import {
@@ -12,9 +12,10 @@ import {
   LinearFilter,
 } from 'three'
 // 引入模型加载器
+
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader'
 import { DRACOLoader } from 'three/examples/jsm/loaders/DRACOLoader'
-import { nextTick, ref, toRefs, onMounted, onBeforeMount } from 'vue'
+import { ref, toRefs, onMounted } from 'vue'
 import { gsap } from 'gsap'
 export default {
   name: 'ModelHere',
@@ -75,7 +76,6 @@ export default {
     },
   },
   setup(props) {
-    console.log('setup')
     let utexture
     const backgroundSizeFn = (e) => {
       const { x: width, y: height } = picSize
@@ -86,6 +86,7 @@ export default {
     }
     // 图片宽高
     let picSize = {}
+    const ModelCanvas = ref(null)
     const {
       isWheel,
       wheelFn,
@@ -98,14 +99,6 @@ export default {
     // 设置页面值
     let page = ref(0)
     onMounted(() => {
-      console.log('onMounted')
-    })
-    onBeforeMount(() => {
-      console.log('onBeforeMount')
-    })
-    nextTick(() => {
-      console.log('nextTick')
-      const screenDom = document.getElementsByClassName('canvas-container')[0]
       // 创建屏幕
       const scene = new Scene()
       // 创建摄像头
@@ -121,7 +114,7 @@ export default {
       const renderer = new WebGL1Renderer({ antialias: true })
       renderer.setSize(window.innerWidth, window.innerHeight)
       // 将画布添加在页面中
-      screenDom.appendChild(renderer.domElement)
+      ModelCanvas.value.appendChild(renderer.domElement)
       // 创建背景
       if (backgroundInfo.value) {
         let url = backgroundInfo.value.src
@@ -291,6 +284,7 @@ export default {
     })
     return {
       page,
+      ModelCanvas,
     }
   },
 }

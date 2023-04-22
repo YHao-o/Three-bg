@@ -1,12 +1,13 @@
 {
-  "name": "three-bg-test2",
-  "version": "0.1.4",
-  "description": "基于Threejs的背景组件,目前仅支持Vue3，请勿下载",
+  "name": "three-bg",
+  "version": "0.2.6",
+  "description": "基于Threejs的背景组件,目前仅支持8Vue3",
   "main": "dist/index.umd.js",
   "keywords": [
     "threejs",
     "background",
-    "3d"
+    "3d",
+    "model"
   ],
   "author": "YH",
   "files": [

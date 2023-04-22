@@ -3,7 +3,7 @@
     examples
     <input />
     <button>click</button>
-    <!-- <Background2To3
+    <Background2To3
       picSrc="2dto3d.jpg"
       depthSrc="2dto3d_depth.jpg"
       :strength="1"
@@ -12,7 +12,7 @@
       :canvasWidth="1"
       :picLoadedFn="mouseFn"
       :refreshRate="100"
-    ></Background2To3> -->
+    ></Background2To3>
     <ModelHere :modelList="modelList"></ModelHere>
   </div>
 </template>
@@ -56,8 +56,8 @@ export default {
         axial: '',
       },
     ]
-    function mouseFn(e) {
-      console.log(e)
+    function mouseFn() {
+      // console.log(e)
     }
     return { mouseFn, modelList }
   },

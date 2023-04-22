@@ -44,6 +44,11 @@ module.exports = {
             }
         ]
     },
+    externals: {
+        vue: 'vue',
+        three:'three'
+    }
+    ,
     optimization: {
         minimize: true,
         minimizer: [new TerserPlugin({

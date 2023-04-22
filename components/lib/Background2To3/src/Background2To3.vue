@@ -1,5 +1,5 @@
 <template>
-  <div class="containerThree" :style="selfStyle"></div>
+  <div class="containerThree" ref="Container" :style="selfStyle"></div>
 </template>
 
 <script>
@@ -13,7 +13,7 @@ import {
   ShaderMaterial,
   Vector2,
 } from 'three'
-import { toRefs, nextTick } from 'vue'
+import { toRefs, onMounted, ref } from 'vue'
 export default {
   name: 'Background2To3',
   props: {
@@ -87,6 +87,7 @@ export default {
       picLoadedFn,
     } = toRefs(props)
     //创建场景
+    const Container = ref(null)
     const scene = new Scene()
     //创建相机
     const camera = new PerspectiveCamera(
@@ -170,9 +171,8 @@ export default {
       requestAnimationFrame(animate)
       renderer.render(scene, camera)
     })
-    nextTick(() => {
-      const container = document.getElementsByClassName('containerThree')[0]
-      container.appendChild(renderer.domElement)
+    onMounted(() => {
+      Container.value.appendChild(renderer.domElement)
       // 根据页面大小重新渲染画布与模型
       // 防抖
       let timer = null
@@ -206,7 +206,7 @@ export default {
           1
       })
     })
-    return {}
+    return { Container }
   },
 }
 </script>
