@@ -1,6 +1,6 @@
 {
   "hash": "1785fea2",
-  "browserHash": "b4428957",
+  "browserHash": "b64ad5bf",
   "optimized": {
     "@vue/devtools-api": {
       "src": "../../../../node_modules/@vue/devtools-api/lib/esm/index.js",
@@ -35,19 +35,31 @@
     "three/examples/jsm/loaders/GLTFLoader": {
       "src": "../../../../node_modules/three/examples/jsm/loaders/GLTFLoader.js",
       "file": "three_examples_jsm_loaders_GLTFLoader.js",
-      "fileHash": "fcf0b069",
+      "fileHash": "5b05339b",
       "needsInterop": false
     },
     "three/examples/jsm/loaders/DRACOLoader": {
       "src": "../../../../node_modules/three/examples/jsm/loaders/DRACOLoader.js",
       "file": "three_examples_jsm_loaders_DRACOLoader.js",
-      "fileHash": "eba0dec9",
+      "fileHash": "bafe7a3d",
       "needsInterop": false
     },
     "gsap": {
       "src": "../../../../node_modules/gsap/index.js",
       "file": "gsap.js",
       "fileHash": "0dc7efa0",
+      "needsInterop": false
+    },
+    "three/examples/jsm/loaders/GLTFLoader.js": {
+      "src": "../../../../node_modules/three/examples/jsm/loaders/GLTFLoader.js",
+      "file": "three_examples_jsm_loaders_GLTFLoader__js.js",
+      "fileHash": "a2033c48",
+      "needsInterop": false
+    },
+    "three/examples/jsm/loaders/DRACOLoader.js": {
+      "src": "../../../../node_modules/three/examples/jsm/loaders/DRACOLoader.js",
+      "file": "three_examples_jsm_loaders_DRACOLoader__js.js",
+      "fileHash": "6f4428f9",
       "needsInterop": false
     }
   },
@@ -60,6 +72,12 @@
     },
     "chunk-JXWQMH7G": {
       "file": "chunk-JXWQMH7G.js"
+    },
+    "chunk-AVFX2RNF": {
+      "file": "chunk-AVFX2RNF.js"
+    },
+    "chunk-OMK6RDCZ": {
+      "file": "chunk-OMK6RDCZ.js"
     },
     "chunk-N64XG22S": {
       "file": "chunk-N64XG22S.js"

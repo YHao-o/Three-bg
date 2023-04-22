@@ -37,6 +37,13 @@ export const searchIndex = [
         "slug": "示例",
         "link": "#示例",
         "children": []
+      },
+      {
+        "level": 3,
+        "title": "参数",
+        "slug": "参数",
+        "link": "#参数",
+        "children": []
       }
     ],
     "path": "/componentDocs/Model.html",
@@ -51,16 +58,3 @@ export const searchIndex = [
     "extraFields": []
   }
 ]
-
-if (import.meta.webpackHot) {
-  import.meta.webpackHot.accept()
-  if (__VUE_HMR_RUNTIME__.updateSearchIndex) {
-    __VUE_HMR_RUNTIME__.updateSearchIndex(searchIndex)
-  }
-}
-
-if (import.meta.hot) {
-  import.meta.hot.accept(({ searchIndex }) => {
-    __VUE_HMR_RUNTIME__.updateSearchIndex(searchIndex)
-  })
-}

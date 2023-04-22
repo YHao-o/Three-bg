@@ -1,7 +1,7 @@
 {
-  "name": "three-bg-test",
-  "version": "0.1.7",
-  "description": "基于Threejs的背景组件,目前仅支持Vue3,测试勿下",
+  "name": "three-bg-test2",
+  "version": "0.1.4",
+  "description": "基于Threejs的背景组件,目前仅支持Vue3，请勿下载",
   "main": "dist/index.umd.js",
   "keywords": [
     "threejs",
@@ -43,6 +43,7 @@
     "sass": "^1.62.0",
     "sass-loader": "^13.2.2",
     "style-loader": "^3.3.2",
+    "vue": "^3.2.47",
     "vue-loader": "^17.0.1",
     "vuepress": "^2.0.0-beta.61",
     "webpack-cli": "^5.0.1"

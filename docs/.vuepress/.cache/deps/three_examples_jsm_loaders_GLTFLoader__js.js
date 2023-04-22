@@ -5,4 +5,4 @@ import "./chunk-N64XG22S.js";
 export {
   GLTFLoader
 };
-//# sourceMappingURL=three_examples_jsm_loaders_GLTFLoader.js.map
+//# sourceMappingURL=three_examples_jsm_loaders_GLTFLoader__js.js.map

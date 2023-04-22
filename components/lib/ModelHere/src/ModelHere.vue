@@ -75,7 +75,7 @@ export default {
     },
   },
   setup(props) {
-    // console.log('setup')
+    console.log('setup')
     let utexture
     const backgroundSizeFn = (e) => {
       const { x: width, y: height } = picSize
@@ -98,13 +98,13 @@ export default {
     // 设置页面值
     let page = ref(0)
     onMounted(() => {
-      // console.log('onMounted')
+      console.log('onMounted')
     })
     onBeforeMount(() => {
-      // console.log('onBeforeMount')
+      console.log('onBeforeMount')
     })
     nextTick(() => {
-      // console.log('nextTick')
+      console.log('nextTick')
       const screenDom = document.getElementsByClassName('canvas-container')[0]
       // 创建屏幕
       const scene = new Scene()

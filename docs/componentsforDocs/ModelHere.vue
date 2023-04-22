@@ -12,8 +12,8 @@ import {
   LinearFilter,
 } from 'three'
 // 引入模型加载器
-import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader'
-import { DRACOLoader } from 'three/examples/jsm/loaders/DRACOLoader'
+import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js'
+import { DRACOLoader } from 'three/examples/jsm/loaders/DRACOLoader.js'
 import { nextTick, ref, toRefs, onMounted, onBeforeMount } from 'vue'
 import { gsap } from 'gsap'
 export default {
@@ -55,7 +55,7 @@ export default {
       default: () => [
         { color: 0xffffff, position: { x: -6, y: 0, z: 1 }, strength: 1 },
         { color: 0x000000, position: { x: 0, y: 0, z: -1 }, strength: 0.5 },
-        { color: 0x2b1e54, position: { x: -1, y: 1, z: 1 }, strength: 1 },
+        { color: 0x2b1e54, position: { x: -1, y: 1, z: 1 }, strength: 2 },
       ],
     },
     //模型信息
@@ -64,21 +64,31 @@ export default {
       type: Array,
       default: () => [
         {
-          modelSrc: '/model/x7.gltf',
+          modelSrc: '/Three-bg/model/X7.gltf',
           // modelSrc: './model/小汽车.gltf',
           scale: { x: 0.1, y: 0.1, z: 0.1 },
           position: { x: 3, y: 0, z: 0 },
           rotation: { x: 0, y: 0, z: 0 },
           delayTime: 1,
           strength: 1,
+          axial: 'x',
         },
         {
-          modelSrc: '/model/GR.gltf',
-          scale: { x: 0.8, y: 0.8, z: 0.8 },
+          modelSrc: '/Three-bg/model/B1.gltf',
+          scale: { x: 0.08, y: 0.08, z: 0.08 },
           position: { x: 3, y: -8, z: 0 },
           rotation: { x: 0, y: 0, z: 0 },
           delayTime: 1,
           strength: 1,
+        },
+        {
+          modelSrc: '/Three-bg/model/小汽车.gltf',
+          scale: { x: 0.4, y: 0.4, z: 0.4 },
+          position: { x: 3, y: -17, z: 0 },
+          rotation: { x: 0, y: -1.5, z: 0 },
+          delayTime: 1,
+          strength: 1,
+          axial: 'y',
         },
         // {
         //   modelSrc: '/model/XQ.gltf',
@@ -115,7 +125,6 @@ export default {
       backgroundInfo,
       modelList,
       lightList,
-      axial,
       isFullScreen,
       screenResizeFn,
     } = toRefs(props)
@@ -164,7 +173,7 @@ export default {
         scene.environment = envTexture
         envTexture.minFilter = LinearFilter
       } else {
-        let url = '/images/scene.jpg'
+        let url = '/Three-bg/images/scene.jpg'
         const envTexture = new TextureLoader().load(url, function (e) {
           picSize = { x: e.source.data.width, y: e.source.data.height }
           utexture = e
@@ -213,8 +222,15 @@ export default {
         // 循环生成模型
         for (let i = 0; i < modelList.value.length; i++) {
           const info = modelList.value[i]
-          const { modelSrc, scale, position, strength, delayTime, rotation } =
-            info
+          const {
+            modelSrc,
+            scale,
+            position,
+            strength,
+            delayTime,
+            rotation,
+            axial,
+          } = info
           loader.load(modelSrc, (gltf) => {
             console.log(gltf)
             gltf.scene.rotation.y = rotation.y
@@ -229,10 +245,10 @@ export default {
               let y = ((e.clientY / window.innerHeight) * 2 - 1) * strength
               // 调用动画时间线函数
               let timeline = gsap.timeline()
-              if (axial.value) {
+              if (axial) {
                 timeline.to(gltf.scene.rotation, {
-                  x: axial.value === 'x' ? 0 + rotation.x : y + rotation.x,
-                  y: axial.value === 'y' ? 0 + rotation.y : x + rotation.y,
+                  x: axial === 'x' ? 0 + rotation.x : y + rotation.x,
+                  y: axial === 'y' ? 0 + rotation.y : x + rotation.y,
                   duration: delayTime,
                 })
               } else {

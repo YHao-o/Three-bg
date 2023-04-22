@@ -15,10 +15,9 @@ or
 <span class="token keyword">import</span> <span class="token constant">THREEBG</span> <span class="token keyword">from</span> <span class="token string">'three-bg'</span>
 vue<span class="token punctuation">.</span><span class="token function">use</span><span class="token punctuation">(</span><span class="token constant">THREEBG</span><span class="token punctuation">)</span>
 <span class="token comment">//按需引入</span>
-<span class="token comment">//目前就一个组件，所以都一样</span>
-<span class="token keyword">import</span> Background2To3 <span class="token keyword">from</span> <span class="token string">'three-bg'</span>
-vue<span class="token punctuation">.</span><span class="token function">use</span><span class="token punctuation">(</span>Background2To3<span class="token punctuation">)</span>
-</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p><a href="https://yhao-o.github.io/Three-bg/" target="_blank" rel="noopener noreferrer">参数详情<ExternalLinkIcon/></a></p>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> Background2To3<span class="token punctuation">,</span> ModelHere <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'three-bg'</span>
+vue<span class="token punctuation">.</span><span class="token function">use</span><span class="token punctuation">(</span>Background2To3<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">use</span><span class="token punctuation">(</span>ModelHere<span class="token punctuation">)</span>
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p><a href="https://yhao-o.github.io/Three-bg/" target="_blank" rel="noopener noreferrer">参数详情<ExternalLinkIcon/></a></p>
 </div></template>
 
 

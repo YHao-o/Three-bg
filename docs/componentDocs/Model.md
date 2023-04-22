@@ -12,16 +12,20 @@ const background = {
 }
 const model = [
   {
-    modelSrc: '/model/x7.gltf',
+    //模型路径
+    modelSrc: '/model/X7.gltf',
+    // 模型比例
     scale: { x: 0.1, y: 0.1, z: 0.1 },
+    // 模型坐标
     position: { x: 3, y: 0, z: 0 },
-    // 初始角度
+    // 模型初始角度
     rotation: { x: 0, y: 0, z: 0 },
-    // 偏移延迟
+    // 模型偏移延迟
     delayTime: 1,
-    //偏移强度
+    // 偏移强度
     strength: 1,
-    axial: '',
+    // 偏转轴向
+    axial: 'x',
   },
   {
     modelSrc: '/model/B1.gltf',
@@ -30,13 +34,21 @@ const model = [
     rotation: { x: 0, y: 0, z: 0 },
     delayTime: 1,
     strength: 1,
-    axial: '',
+  },
+  {
+    modelSrc: '/model/小汽车.gltf',
+    scale: { x: 0.4, y: 0.4, z: 0.4 },
+    position: { x: 3, y: -17, z: 0 },
+    rotation: { x: 0, y: -1.5, z: 0 },
+    delayTime: 1,
+    strength: 1,
+    axial: 'y',
   },
 ]
 const light = [
-  { color: 0xffffff, position: { x: -6, y: 0, z: 1 }, strength: 1 },
-  { color: 0x000000, position: { x: 0, y: 0, z: -1 }, strength: 0.5 },
-  { color: 0x2b1e54, position: { x: -1, y: 1, z: 1 }, strength: 1 },
+  { color: '0xffffff', position: { x: -6, y: 0, z: 1 }, strength: 1 },
+  { color: '0x000000', position: { x: 0, y: 0, z: -1 }, strength: 0.5 },
+  { color: '0x2b1e54', position: { x: -1, y: 1, z: 1 }, strength: 1 },
 ]
 ```
 
@@ -46,6 +58,7 @@ const light = [
   :backgroundInfo="background"
   :modelList="model"
   :lightList="light"
+  :isFullScreen="true"
 ></ModelHere>
 ```
 

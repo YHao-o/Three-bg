@@ -34,6 +34,13 @@ module.exports = {
             {
                 test: /\.scss$/,
                 use: ['style-loader', 'css-loader', 'sass-loader']
+            }, {
+                test: /\.js$/,
+                exclude: /node_modules/,
+                use: 'babel-loader'
+            }, {
+                test: /\.css$/,
+                use: ['vue-style-loader', 'css-loader']
             }
         ]
     },
@@ -43,5 +50,4 @@ module.exports = {
             extractComments: false, //不将注释提取到单独的文件中
         })],
     },
-
 }
